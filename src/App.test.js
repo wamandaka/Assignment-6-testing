@@ -20,9 +20,9 @@ test("renders App component with NavBar, image banner, and Footer", async () => 
   const linkX = screen.getByTestId("link-x");
   const linkInstagram = screen.getByTestId("link-instagram");
 
-  expect(linkFacebook).toBeInTheDocument();
-  expect(linkX).toBeInTheDocument();
-  expect(linkInstagram).toBeInTheDocument();
+  expect(linkFacebook).toHaveProperty("href", "https://facebook.com/");
+  expect(linkX).toHaveProperty("href", "https://x.com/");
+  expect(linkInstagram).toHaveProperty("href", "https://instagram.com/");
   expect(footer).toBeInTheDocument();
 
   // navbar is rendered
